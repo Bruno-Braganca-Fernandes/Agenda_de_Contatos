@@ -28,8 +28,8 @@ function addContact() {
     let contact = '<tr>';
     contact += `<td>${inputContactName.value}</td>`
     contact += `<td>${inputContactNumber.value}</td>`
-    contact += `<td><button onclick="editContact(${names.length - 1})">Editar</button></td>`;
-    contact += `<td><button onclick="deleteContact(${names.length - 1})">Excluir</button></td>`;
+    contact += `<td><button class="edit" onclick="editContact(${names.length - 1})">✏️</button></td>`;
+    contact += `<td><button class="delete" onclick="deleteContact(${names.length - 1})">🗑️</button></td>`;
     contact += '</tr>'
 
     contacts += contact
@@ -56,8 +56,8 @@ function editContact(index) {
             contacts += `<tr>`;
             contacts += `<td>${names[i]}</td>`;
             contacts += `<td>${numbers[i]}</td>`;
-            contacts += `<td><button onclick="editContact(${i})">Editar</button></td>`;
-            contacts += `<td><button onclick="deleteContact(${i})">Excluir</button></td>`;
+            contacts += `<td><button class="edit" onclick="editContact(${i})">✏️</button></td>`;
+            contacts += `<td><button class="delete" onclick="deleteContact(${i})">🗑️</button></td>`;
             contacts += `</tr>`;
         }
 
@@ -75,8 +75,8 @@ function deleteContact(index) {
             contacts += `<tr>`;
             contacts += `<td>${names[i]}</td>`;
             contacts += `<td>${numbers[i]}</td>`;
-            contacts += `<td><button onclick="editContact(${i})">Editar</button></td>`;
-            contacts += `<td><button onclick="deleteContact(${i})">Excluir</button></td>`;
+            contacts += `<td><button class="edit" onclick="editContact(${i})">✏️</button></td>`;
+            contacts += `<td><button class="delete" onclick="deleteContact(${i})">🗑️</button></td>`;
             contacts += `</tr>`;
         }
 
